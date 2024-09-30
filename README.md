@@ -11,9 +11,20 @@ spring.datasource.password=yms_clave
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
 
-Despuyes de esto creamos un contenedor en Docker
+Despues de esto creamos una imagen en Docker
 docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=yms_root_password -e MYSQL_DATABASE=yms -e MYSQL_USER=yms_user -e MYSQL_PASSWORD=yms_clave -p 3306:3306 -d mysql:latest  
 con este comendo desde el terminal en el cual utilizamos la informacion que nos muestra el application.properties
+
+
+
+
+<img width="1246" alt="Captura de pantalla 2024-09-30 a la(s) 9 15 20 a  m" src="https://github.com/user-attachments/assets/3492da08-6264-49b8-954e-df63738bf075">
+
+
+
+
+#Perdon profe nos comio la presion 
+#somos frijolitos 
 
 
 
