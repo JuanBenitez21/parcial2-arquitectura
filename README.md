@@ -12,3 +12,9 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
 
 Despuyes de esto creamos un contenedor en Docker
+docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=yms_root_password -e MYSQL_DATABASE=yms -e MYSQL_USER=yms_user -e MYSQL_PASSWORD=yms_clave -p 3306:3306 -d mysql:latest  
+con este comendo desde el terminal en el cual utilizamos la informacion que nos muestra el application.properties
+
+
+
+
