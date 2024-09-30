@@ -5,9 +5,12 @@ import co.edu.unisabana.parcial.controller.dto.ResponseGate;
 import co.edu.unisabana.parcial.service.CheckpointService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
+
 
 @RestController
 public class GateController {
@@ -27,7 +30,8 @@ public class GateController {
       return new ResponseGate(true);
     } catch (Exception exception) {
       logger.error("Error in checkin", exception);
-      return new ResponseGate(false);
+      throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Error in checkin", exception);
+      //return new ResponseGate(false);
     }
   }
 

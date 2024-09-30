@@ -1,7 +1,7 @@
 package co.edu.unisabana.parcial;
-
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
 
 @SpringBootTest
 class ParcialApplicationTests {
@@ -9,5 +9,4 @@ class ParcialApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
